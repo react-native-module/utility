@@ -15,6 +15,7 @@
     "build": "rimraf ./lib && rollup -c ./rollup.config.js && npm run build:types",
     "build:types": "tsc --emitDeclarationOnly --declaration --declarationDir lib/types",
     "lint": "eslint",
+    "release": "release-it",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
@@ -29,6 +30,7 @@
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-n": "^15.2.4",
     "eslint-plugin-promise": "^6.0.0",
+    "release-it": "^15.1.2",
     "rimraf": "^3.0.2",
     "rollup": "^2.77.0",
     "typescript": "4.4.4"

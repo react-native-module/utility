@@ -1,7 +1,7 @@
-type PlatformType = 'JavaScriptCore' | 'Hermes' | 'NodeJs' | 'Browser'
+type EngineType = 'JavaScriptCore' | 'Hermes' | 'NodeJs' | 'Browser'
 type Environment = 'NodeJs' | 'NativeMobile' | 'Browser'
 
-const _PlatformType: PlatformType = (function (): PlatformType {
+const _PlatformType: EngineType = (function (): EngineType {
   const isReactNative = globalThis?.navigator?.product === 'ReactNative'
   if (isReactNative) {
     try {

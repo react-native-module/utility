@@ -36,7 +36,9 @@
     "typescript": "4.4.4"
   },
   "license": "ISC",
-  "keywords": [],
+  "keywords": [
+    "react-native-module"
+  ],
   "bugs": {
     "url": "https://github.com/react-native-module/utility/issues"
   }

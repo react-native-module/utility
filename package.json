@@ -6,6 +6,8 @@
   "main": "lib/cjs/index.js",
   "module": "lib/es/index.js",
   "types": "lib/types/index.d.ts",
+  "react-native": "src/index",
+  "source": "src/index",
   "homepage": "https://github.com/react-native-module/utility#readme",
   "repository": {
     "type": "git",

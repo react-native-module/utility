@@ -37,6 +37,9 @@
     "rollup": "^2.77.0",
     "typescript": "4.4.4"
   },
+  "peerDependencies": {
+    "react-native": "*"
+  },
   "license": "ISC",
   "keywords": [
     "react-native-module"

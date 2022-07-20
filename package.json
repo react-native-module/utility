@@ -6,15 +6,17 @@
   "main": "lib/cjs/index.js",
   "module": "lib/es/index.js",
   "types": "lib/types/index.d.ts",
+  "react-native": "src/index",
+  "source": "src/index",
   "homepage": "https://github.com/react-native-module/utility#readme",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/react-native-module/utility.git"
   },
   "scripts": {
+    "lint": "eslint",
     "build": "rimraf ./lib && rollup -c ./rollup.config.js && npm run build:types",
     "build:types": "tsc --emitDeclarationOnly --declaration --declarationDir lib/types",
-    "lint": "eslint",
     "release": "npm run build && release-it",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -35,11 +37,17 @@
     "rollup": "^2.77.0",
     "typescript": "4.4.4"
   },
+  "peerDependencies": {
+    "react-native": "*"
+  },
   "license": "ISC",
   "keywords": [
     "react-native-module"
   ],
   "bugs": {
     "url": "https://github.com/react-native-module/utility/issues"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
   }
 }

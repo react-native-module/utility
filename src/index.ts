@@ -1,7 +1,4 @@
-import Platform from './platform'
-
-const Environment = Platform.Environment
-const PlatformType = Platform.PlatformType
+import { Environment, PlatformType } from './platform'
 
 export {
   PlatformType,

@@ -1,7 +1,7 @@
 type EngineType = 'JavaScriptCore' | 'Hermes' | 'NodeJs' | 'Browser'
-type Environment = 'NodeJs' | 'NativeMobile' | 'Browser'
+type EnvironmentType = 'NodeJs' | 'NativeMobile' | 'Browser'
 
-const _PlatformType: EngineType = (function (): EngineType {
+const PlatformType: EngineType = (function (): EngineType {
   const isReactNative = globalThis?.navigator?.product === 'ReactNative'
   if (isReactNative) {
     try {
@@ -22,17 +22,17 @@ const _PlatformType: EngineType = (function (): EngineType {
 })()
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-const isRunningOnNodeJs = _PlatformType === 'NodeJs'
-const isRunningOnNativeMobile = _PlatformType === 'JavaScriptCore' || _PlatformType === 'Hermes'
-const isRunningOnBrowser = _PlatformType === 'Browser'
+const isRunningOnNodeJs = PlatformType === 'NodeJs'
+const isRunningOnNativeMobile = PlatformType === 'JavaScriptCore' || PlatformType === 'Hermes'
+const isRunningOnBrowser = PlatformType === 'Browser'
 
-const _Environment: Environment = isRunningOnNativeMobile
+const Environment: EnvironmentType = isRunningOnNativeMobile
   ? 'NativeMobile'
   : isRunningOnBrowser
     ? 'Browser'
     : 'NodeJs'
 
-export default {
-  PlatformType: _PlatformType,
-  Environment: _Environment
+export {
+  PlatformType,
+  Environment
 }
